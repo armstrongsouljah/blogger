@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page_title %}Signup &rAarr; {{block.super}}{% endblock %}
+
+{% block main_content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12 m6 l6 offset-m3 offset-l3">
+            <form method="post" action="">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn" type="submit" value="Signup"/>
+            </form>
+        </div>
+    </div>
+ </div>
+{% endblock %}
