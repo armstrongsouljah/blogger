@@ -25,8 +25,9 @@ from landingpage.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landingpage.urls', namespace='landing')),
-    path('accounts/login', UserLoginView.as_view(), name='login'),
-    path('accounts/logout', LogoutView.as_view(), name='logout'),
-    path('accounts/register', UserRegisterView.as_view(), name='signup'),
-    path('accounts/profile', DashBoardView.as_view(), name='dashboard')
+    path('accounts/login/', UserLoginView.as_view(), name='login'),
+    path('accounts/logout/', LogoutView.as_view(), name='logout'),
+    path('accounts/register/', UserRegisterView.as_view(), name='signup'),
+    path('accounts/profile', DashBoardView.as_view(), name='dashboard'),
+    path('blog/', include('blogapp.urls', namespace='blog'))
 ]
